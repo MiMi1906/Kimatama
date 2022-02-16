@@ -1,0 +1,89 @@
+<!--勉強を記録するのページ-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="www//css/study_record.css">
+    <link rel="javascript" href="www//javaScript/study_record.js">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="components/loader.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+
+        function set_item(){
+            let date = document.getElementById("record_date").value;
+            let record = document.getElementById('study_record').value;
+            localStorage.setItem(date, record);
+        }
+        function get_Item(){
+            let date = document.getElementById("record_date").value;
+            alert(localStorage.getItem(date));
+        }
+
+        function load() {
+            let date = document.getElementById("record_date").value;
+            let record = localStorage.getItem(date);
+            document.getElementById('study_record').value = record;
+        }
+
+
+    </script>
+
+    <style>
+        h1{
+            border-bottom:solid 1px #555;
+        }
+        body{
+            margin: 2em;
+        }
+    </style>
+
+    <title>勉強記録</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10"><h1 class="text-center">勉強を記録する</h1></div>
+        </div>
+    </div>
+    <br>
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"><a class="nav-link" href="./index.html">ホーム</a></li>
+        <li class="nav-item"><a class="nav-link active" href="./study_record.html">勉強を記録する</a></li>
+        <li class="nav-item"><a class="nav-link" href="./timer.html">タイマーを使用する</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">今週の目標</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">100ページチャレンジ</a></li>
+    </ul>
+    <br>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <input type="date" id="record_date" max="9999-12-31" onchange="load()">
+                <br>
+                <textarea cols="40" rows="8" id="study_record" class="text-center" ></textarea></p>
+
+                <button onclick="set_item()">記録</button>
+            </div>
+
+            <!--総合勉強時間 記録フォーム-->
+            
+            <!--<form>
+                <input type="number" name="hour" max="23" min="0" step="1">
+                <div class="error">23以下の整数のみ入力できます</div>
+                <p>hour</p>
+
+                <input type="number" name="minutes" min="0" max="59">
+                <div class="error">59以下の整数値のみ入力できます</div>
+                <p>minutes</p>
+                <input type="button" value="計算" onclick="figure()">
+            </form>  -->
+        </div>
+
+    </div>
+
+</body>
+</html>

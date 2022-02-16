@@ -1,0 +1,39 @@
+body{ 
+    background: #eeeeee;
+    font-family: Meiryo;
+}
+div{
+    background: #ffffff;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    margin: 30px auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.grovalNavigation{
+    height: 70px;
+    text-align: center;
+    /*background-color: #888;*/
+    color: #fff;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    margin-top: 10px;
+}
+.content{
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    margin-left: 10px;
+}
+.localNavigation{
+    width: 300px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
