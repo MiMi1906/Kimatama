@@ -6,5 +6,8 @@
 ## アプリケーション情報
 
 オリジナル作成者 : usama_ru513
+
 フロントエンド : HTML / CSS / JavaScript
+
 データ保存先 : Local Storage
+
