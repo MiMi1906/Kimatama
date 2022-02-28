@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy"
+            content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <link rel="stylesheet" href="../components/loader.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/mystyle.css">
+        <script src="../components/loader.js"></script>
+        <script src="JavaScript/stopWatch.js"></script>
+        <script src="JavaScript/bootstrap.bundle.js"></script>
+        <!--<script>
+        var PassSec;   // 秒数カウント用変数
+        
+        // 繰り返し処理の中身
+        function showPassage() {
+            PassSec++;   // カウントアップ
+            var msg = "ボタンを押してから " + PassSec + "秒が経過しました。";   // 表示文作成
+            document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
+            }
+            
+            // 繰り返し処理の開始
+            function startShowing() {
+                PassSec = 0;   // カウンタのリセット
+                PassageID = setInterval('showPassage()',1000);   // タイマーをセット(1000ms間隔)
+                document.getElementById("startcount").disabled = true;   // 開始ボタンの無効化
+                }
+                
+                // 繰り返し処理の中止
+                function stopShowing() {
+                    clearInterval( PassageID );   // タイマーのクリア
+                    document.getElementById("startcount").disabled = false;   // 開始ボタンの有効化
+                }
+    </script> -->
+        <title>タイマー</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h1 class="text-center">タイマー</h1>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item"><a class="nav-link" href="./index.html">ホーム</a></li>
+            <li class="nav-item"><a class="nav-link" href="./study_record.html">勉強を記録する</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./timer.html">タイマーを使用する</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">今週の目標</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">100ページチャレンジ</a></li>
+        </ul>
+
+        <!--<p>
+        <input type="button" value="カウント開始" id="startcount" onclick="startShowing();">
+        <input type="button" value="カウント停止" id="endcount" onclick="stopShowing();">
+        </p>
+        <p id="PassageArea">(ここにカウントが表示されます)</p>
+
+        <p>１時間　＝　３６００秒</p>
+        <p>１時間３０分　＝　５４００秒</p>
+        <p>２時間　＝　７２００秒</p>
+        <p>３時間　＝　１０８００秒</p>
+    -->
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <form name="form1" id="form1" class="text-center">
+                    <p id="time">
+                        00:00:00.00
+                    </p>
+                    <button type="button" id="btnStart" onclick="startStop()">
+                        スタート
+                    </button>
+                    <button type="button" id="btnClear" onclick="resetStopWatch()">
+                        クリア
+                    </button>
+                </form>
+                <footer>&copy; 2014 Shuichi Takeda.</footer>
+            </div>
+        </div>
+
+    </body>
+
+</html>

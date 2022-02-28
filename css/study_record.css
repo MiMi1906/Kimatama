@@ -1,0 +1,34 @@
+/* This is a CSS file */
+.japanese {
+    position: relative;
+}
+
+.japanese p {
+    position: absolute;
+    color:mediumturquoise;
+    top: 0;
+    left: 0;
+}
+
+.japanese img {
+    width: 100%;
+}
+
+.error {
+    display: none;
+}
+
+input:invalid + .error {
+    display:  block;
+    color: red;
+    font-size: 0.9em;
+}
+
+input:invalid {
+    border: solid 3px red;
+    outline: 0;
+}
+
+h1{
+	border-bottom:solid 1px #555;
+}

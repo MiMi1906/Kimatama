@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+:root{
+    --top-bar-height: 60px;
+    --bottom-bar-height: 60px;
+
+    --main-color: #ff5733;
+}
+
+h1 small{
+    font-size: 16px;
+}
+
+h1 small::before{
+    content: '・';
+    margin: 0 .5rem;
+}
+
+h3 small{
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+.target-graph{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.target-percent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.target-percent .target-percent-num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;    
+    color: #47b39d;
+    line-height: 40px;
+}
+
+.target-percent .target-percent-symbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;    
+    color: #aaa;
+    line-height: 10px;
+}
+
+.target-time{
+    display: flex;
+    align-items: baseline;
+}
+
+.target-time .target-time-total{
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+.target-time .target-time-total .target-time-total-num{
+    display: flex;
+    font-size: 30px;
+    color: #47b39d;
+    margin-right: 5px;
+}
+
+.target-time .target-time-total .target-time-total-symbol{
+    display: flex;
+    font-size: 16px;
+    color: #47b39d;
+}
+
+.target-time .target-time-goal{
+    display: flex;
+    font-size: 16px;
+    color: #888;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.target-time .target-time-goal::before{
+    content: '/';
+    margin-right: 5px;    
+}
+
+.top-menu-bar{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: var(--top-bar-height);
+
+    position: fixed;
+    top: 0;
+
+    z-index: 1;
+
+    box-shadow: 0 0 8px #ccc;
+}
+
+.top-menu-bar h1.top-menu-bar-title{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100vw - var(--top-bar-height) * 2);
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-weight: normal;
+
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.top-menu-bar .top-menu-bar-icon{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: var(--top-bar-height);
+    height: 100%;
+}
+
+.top-menu-bar .top-menu-bar-icon a{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: calc(var(--top-bar-height) - 10px);
+    height: calc(var(--top-bar-height) - 10px);
+    border-radius: 50%;
+    
+    color: #555;
+
+    transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+}
+
+.top-menu-bar .top-menu-bar-icon a:hover{
+    background-color: #eee;
+}
+
+.top-menu-bar .top-menu-bar-icon a ion-icon{
+    font-size: 26px;
+}
+
+.content-area{
+    display: flex;
+
+    height: calc(100vh - var(--top-bar-height) - var(--bottom-bar-height));
+    margin-top: var(--top-bar-height);
+    padding-top: 1rem;
+    overflow-y: scroll;
+}
+
+.home-menu-list{
+    display: flex;
+    align-items: center;
+
+}
+
+a.home-menu-list{
+    color: #333;
+    text-decoration: none;
+}
+
+.home-menu-list .home-menu-list-content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.home-menu-list .home-menu-list-content.home-menu-list-arrow{
+    display: flex;
+    justify-content: end;
+}
+
+.bottom-menu-bar{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: var(--bottom-bar-height);
+
+    position: fixed;
+    bottom: 0;
+
+    z-index: 2;
+
+    box-shadow: 0 0 8px #ccc;
+}
+
+.bottom-menu-bar .bottom-menu-bar-icon{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-menu-bar .bottom-menu-bar-icon a{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    
+    color: #555;
+
+    transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+}
+
+.bottom-menu-bar .bottom-menu-bar-icon a.active{
+    flex-direction: column;
+    background-color: var(--main-color);
+    color: #eee;
+}
+
+.bottom-menu-bar .bottom-menu-bar-icon a:hover:not(.active){
+    background-color: #eee;
+}
+
+.bottom-menu-bar .bottom-menu-bar-icon a ion-icon{
+    font-size: 26px;
+}
